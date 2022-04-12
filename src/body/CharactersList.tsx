@@ -1,4 +1,4 @@
-import {FunctionComponent, useEffect, useState} from 'react';
+import {Fragment, FunctionComponent, useEffect, useState} from 'react';
 import {ListItems} from "./ListItems";
 import {fetchAll, fetchFiltered} from "../api/users";
 
@@ -27,10 +27,15 @@ export const CharactersList: FunctionComponent = (props: Props) => {
 
 
     return (
-        <div>
-            <input data-testid={'user search'} placeholder={'Start to type name of a Character'}
-                   onChange={(event) => setUserListQueryFilter(event.target.value)}/>
-            <ListItems items={userList}/>
-        </div>
+            <>
+                <div>
+                    hi
+                </div>
+                <div>
+                    <input data-testid={'user search'} placeholder={'Start to type name of a Character'}
+                           onChange={(event) => setUserListQueryFilter(event.target.value)}/>
+                    <ListItems items={userList}/>
+                </div>
+            </>
     );
 };
