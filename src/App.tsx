@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Header} from "./header/Header";
+import {CharactersList} from "./body/CharactersList";
 
 function App() {
     return (
         <div className="App">
-            <Header />
+            <Header/>
+            <CharactersList/>
         </div>
     );
 }
