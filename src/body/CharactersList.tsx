@@ -28,7 +28,7 @@ export const CharactersList: FunctionComponent = (props: Props) => {
 
     return (
         <div>
-            <input placeholder={'Start to type name of a Character'}
+            <input data-testid={'user search'} placeholder={'Start to type name of a Character'}
                    onChange={(event) => setUserListQueryFilter(event.target.value)}/>
             <ListItems items={userList}/>
         </div>

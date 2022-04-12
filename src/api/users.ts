@@ -62,3 +62,9 @@ export const fetchFiltered = async (input: string): Promise<string[]> => {
         return searchElement.includes(input);
     })
 }
+
+class Service {
+
+}
+
+export default Service
