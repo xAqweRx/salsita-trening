@@ -63,8 +63,6 @@ export const fetchFiltered = async (input: string): Promise<string[]> => {
     })
 }
 
-class Service {
-
+export const fetchCharacterDetails = async (input: number): Promise<string> => {
+    return USER_LISTS[input]
 }
-
-export default Service

@@ -1,0 +1,53 @@
+// The global state
+const state = {
+    users: [],
+    wizardSchools: [],
+}
+
+const userReducer = (action, currentState) => {
+    switch(action.type) {
+        case: 'ADD_USER':
+            return {
+                ...currentState,
+                users: [
+                    ...currentState.users,
+                    action.payload
+                ]
+            }
+
+        case 'EDIT_USER':
+            return {
+                ...currentState
+                // the found and updated user
+            }
+    }
+}
+
+const wizardSchoolReducer = (action, currentState) => {
+    // logic for updating the wizardSchools portion of the state
+}
+
+export const rootReducer = (action, currentState) => combineReducers({
+    users: userReducer,
+    wizardSchools: wizardSchoolReducer,
+    ...
+})
+
+
+
+// if you were to make a form for adding users, the component
+// would look like this:
+const AddUserForm = () => {
+    onUserSubmit = () => {
+        const response = await api.createUser(userName)
+
+        // update the store with the response
+        dispatch({
+            type: 'ADD_USER',
+            payload: response
+        })
+    }
+
+    input value={userName}
+    button onClick={onUserSubmit}
+}

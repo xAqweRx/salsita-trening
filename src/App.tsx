@@ -5,10 +5,10 @@ import {CharactersList} from "./body/CharactersList";
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <CharactersList/>
-        </div>
+            <div className="App">
+                <Header/>
+                <CharactersList/>
+            </div>
     );
 }
 
