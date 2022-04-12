@@ -48,6 +48,6 @@ const AddUserForm = () => {
         })
     }
 
-    input value={userName}
+    input value={userName}~Z
     button onClick={onUserSubmit}
 }
